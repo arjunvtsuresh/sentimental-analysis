@@ -3,7 +3,7 @@
 ## setup
 
 ### To Run:
-#### Install docker-compose
+#### Install docker-compose and docker
 #### Build frontend and backend using the command
 - docker-compose up --build -d
 
