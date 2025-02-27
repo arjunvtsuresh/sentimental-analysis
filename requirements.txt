@@ -4,3 +4,4 @@ starlette-graphene3
 transformers
 uvicorn
 torch
+strawberry-graphql
