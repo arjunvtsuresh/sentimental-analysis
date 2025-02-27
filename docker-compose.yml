@@ -1,0 +1,23 @@
+
+services:
+  backend:
+    build: .
+    container_name: sentiment-analysis
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEY=mysecretkey
+    restart: always
+  
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: always
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    stdin_open: true
+    tty: true
